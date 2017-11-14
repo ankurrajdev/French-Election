@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li> <a href="{{ links[0].href }}">{{links[0].label}}</a> </li>
+<li> <a href="{{ links[1].href }}">{{links[1].label}}</a></li>
+<li class="active"> <a href="{{ links[2].href }}">{{links[2].label}}</a> </li>
+<li> <a href="{{ links[3].href }}">{{links[3].label}}</a> </li>
+{% endblock %}
+
+{% block header %}<h1>The analysis</h1>{% endblock %}
+
+{% block content %}
+<div class="container">
+	<section class="row">
+		<div class="col-lg-2">
+		    <ul class="nav nav-pills nav-stacked">
+		      <li role="presentation" class="active"><a href="{{ analysis_links[0].href }}">{{analysis_links[0].label}}</a></li>
+		      <li role="presentation"><a href="{{ analysis_links[1].href }}">{{analysis_links[1].label}}</a></li>
+		      <li role="presentation"><a href="{{ analysis_links[2].href }}">{{analysis_links[2].label}}</a></li>
+		    </ul>
+		</div>
+		<div class="col-lg-10">
+			<form method="post" class="col-lg-6" >
+				<div class="form-group">
+					<label for="select">Choose the analysis per media or per candidate: </label>
+					<div id="select">
+						{{ form.C_M(class_ = "form-control" ) }}
+						{{ form.hidden_tag() }}
+					</div>
+					<br>
+
+					<label class="checkbox-inline">
+					<input type="checkbox" id="macron" name='box' value='0'>Macron 
+					</label>
+					<label class="checkbox-inline">
+					<input type="checkbox" id="macron" name='box' value='1'>Fillon 
+					</label>
+					<label class="checkbox-inline">
+					<input type="checkbox" id="macron" name='box' value='2'>Le Pen
+					</label>
+					<label class="checkbox-inline">
+					<input type="checkbox" id="macron" name='box' value='3'>Hamon
+					</label>
+					<label class="checkbox-inline">
+					<input type="checkbox" id="macron" name='box' value='4'>Mélenchon
+					</label>
+
+					<br>
+		    		<input type="submit" class="btn btn-primary" value="Enter"/>	
+				</div>
+			</form>
+
+			<div class="col-lg-12">
+				<img src="{{chart_src1}}">
+			</div>	
+			<div class="col-lg-12">
+				<p>{{sentence}}</p>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+{% endblock %}

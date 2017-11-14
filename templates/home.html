@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li class="active"> <a href="{{ links[0].href }}">{{links[0].label}}</a> </li>
+<li> <a href="{{ links[1].href }}">{{links[1].label}}</a></li>
+<li> <a href="{{ links[2].href }}">{{links[2].label}}</a> </li>
+<li> <a href="{{ links[3].href }}">{{links[3].label}}</a> </li>
+{% endblock %}
+
+{% block header %}<h1>Home</h1>{% endblock %}
+
+
+{% block content %}
+
+<section class="jumbotron">
+    <h2>
+        Our project
+    </h2>
+    <hr class="my-4">
+    <p>
+        People say the media has a huge role in shaping the public opinion. But it is not always clear how it really affects the public opinion. For instance, we are not sure if the number of articles influence the public opinion. Therefore, in out project we wanted to ask the following questions:
+    </p>
+    <p>
+        <ol>
+            <li>What does the media coverarge look like for each candidate?</li>
+            <li>How does the public opinion change based on twitter tweets? Is there a correlation with the media coverage?</li>
+            <li>What can we learn each candidate from their speech?</li>
+            <li>Is there a difference between the public opinion about the party and the candidate?</li>
+        </ol>
+
+    </p>
+        
+    <p>
+        To address those questions, we did different analysis about the number of article published by the media about the different candidates, the tweets and a sentimental analysis on the speech of the candidates. 
+    </p>
+        
+    
+</section>
+<section class="row">
+    <div class="col-lg-12">
+        <img src="{{url_for('static', filename = 'graphs/Presentation_Slide.png')}}">
+    </div>
+</section>
+
+<section class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"> <a href="{{ analysis_links[0].href }}">What does the media coverarge look like for each candidate?</a></h3>
+            </div>
+            <div class="panel-body row">
+                <div class="col-lg-6">{% include contenu1[0] %}</div>
+                <div class="col-lg-6">{% include contenu1[1] %}</div>    
+            </div>
+        </div>
+    </div> 
+</section>
+<section class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="{{ analysis_links[1].href }}">How does the public opinion change based on twitter tweets? Is there a correlation with the media coverage?</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">{% include contenu2[0] %}</div>
+                <div class="col-lg-6">{% include contenu2[1] %}</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="{{ analysis_links[2].href }}">What can we learn each candidate from their speech?</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row"> <img src="{{ contenu3[0] }}" class="img-thumbnail"></div>
+                </div>
+                <div class="col-lg-6">{% include contenu3[1] %}</div> 
+            </div>
+        </div>
+    </div>
+</section> 
+<section class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="{{ analysis_links[3].href }}">Is there a difference between the public opinion about the party and the candidate?</a></h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-6">{% include contenu4[0] %}</div>
+                <div class="col-lg-6">{% include contenu4[1] %}</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

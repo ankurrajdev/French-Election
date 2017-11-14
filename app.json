@@ -1,0 +1,14 @@
+{
+  "name": "Flask Heroku French Election",
+  "description": "Web application about French election",
+  "keywords": [
+    "flask",
+    "python",
+    "French",
+    "election"
+  ],
+  "repository": "https://github.com/Barbara-Stickel/FrenchElection",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}

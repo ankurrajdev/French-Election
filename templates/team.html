@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li> <a href="{{ links[0].href }}">{{links[0].label}}</a> </li>
+<li> <a href="{{ links[1].href }}">{{links[1].label}}</a></li>
+<li  class="active"> <a href="{{ links[2].href }}">{{links[2].label}}</a> </li>
+<li> <a href="{{ links[3].href }}">{{links[3].label}}</a> </li>
+{% endblock %}
+
+{% block header %}<h1>The Team</h1>{% endblock %}
+
+
+{% block content %}
+<section class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-lg-1"><img src="{{url_for('static', filename = 'images/barbara.jpg')}}" style="width: 100%;"></div>
+                        <div class="col-lg-11">
+                            <b>Barbara Stickel</b><br> 
+                            <br>
+                            M.S. in Electrical Engineering, Supélec, France <br>
+                            M.S. in Industrial Engineering, Columbia University, United-States
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-lg-1"><img src="{{url_for('static', filename = 'images/ankur.jpg')}}" style="width: 100%;"></div>
+                        <div class="col-lg-11">
+                            <b>Ankur Radjev</b>
+                            <br> 
+                            <br> 
+                            B.S in Polymer Science and Chemical Technology, DTU , India <br> 
+                            M.S. in Operation Research, Columbia University, United-States
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-lg-1"><img src="{{url_for('static', filename = 'images/nomin.jpg')}}" style="width: 100%;"></div>
+                        <div class="col-lg-11">
+                            <b>Nomin-Erdene Oyun</b>
+                            <br> 
+                            <br> 
+                            School of Engineering, University of Tokyo, Japan <br>
+                            M.S. in Operation Research, Columbia University, United-States 
+                        
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-lg-1"><img src="{{url_for('static', filename = 'images/yassine.jpeg')}}" style="width: 100%;"></div>
+                        <div class="col-lg-11">
+                            <b>Yassine Chakir</b><br> 
+                            <br> 
+                            M.S. in Electrical Engineering, Supélec, France <br> 
+                            M.S. in Operation Research, Columbia University, United-States
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-lg-1"><img src="{{url_for('static', filename = 'images/olivier.jpg')}}" style="width: 100%;"></div>
+                        <div class="col-lg-11">
+                            <b>Olivier Azan</b><br> 
+                            <br> 
+                            M.S. in Electrical Engineering, Supélec, France <br> 
+                            M.S. in Operation Research, Columbia University, United-States
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>
+
+{% endblock %}

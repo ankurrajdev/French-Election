@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block nav %}
+<li> <a href="{{ links[0].href }}">{{links[0].label}}</a> </li>
+<li> <a href="{{ links[1].href }}">{{links[1].label}}</a></li>
+<li> <a href="{{ links[2].href }}">{{links[2].label}}</a> </li>
+<li  class="active"> <a href="{{ links[3].href }}">{{links[3].label}}</a> </li>
+{% endblock %}
+
+{% block header %}<h1>References</h1>{% endblock %}
+
+{% block content %}
+	<p>We found our data there:
+		<ul>
+			<li>LeMonde.fr</li>
+			<li>LeFigaro.fr</li>
+			<li>France24.com</li>
+			<li>twitter</li>
+		</ul>
+
+	</p>
+{% endblock %}
